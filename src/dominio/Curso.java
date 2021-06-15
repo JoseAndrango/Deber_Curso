@@ -27,17 +27,13 @@ public class Curso {
         this.promedio = Math.random()*6;
     }
     public void setestudiantesA(){
-        int estudiantes = 0;
-        double promedio=0;
+        int estudiantes= (int) this.promedio;
         for(int i=0;i<12;i++){
-            double aux=notas[i];
-            promedio=aux+promedio;
-        } for(int i=0;i<12;i++){
-            if(notas[i]<(promedio/12)){
+           if(notas[i]<(promedio/12)){
                 estudiantes++;
             }
     }
-        this.estudiantes_A = estudiantes; 
+        this.estudiantes_A=estudiantes;
     }
     public double getpromedio(){
         return this.promedio;
