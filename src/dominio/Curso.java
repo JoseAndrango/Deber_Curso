@@ -5,6 +5,7 @@ public class Curso {
     private double [] notas;
     private double promedio;
     private int estudiantes_A;
+    private double aux; 
 
     public Curso() {
         notas = new double[12];
@@ -19,10 +20,23 @@ public class Curso {
     }
     public void setpromedio(){
         double promedio = 0;
-        this.promedio = promedio;
+        for(int i=0;i<12;i++){
+            double aux=notas[i];
+            promedio=aux+promedio;
+        }
+        this.promedio = Math.random()*6;
     }
     public void setestudiantesA(){
         int estudiantes = 0;
+        double promedio=0;
+        for(int i=0;i<12;i++){
+            double aux=notas[i];
+            promedio=aux+promedio;
+        } for(int i=0;i<12;i++){
+            if(notas[i]<(promedio/12)){
+                estudiantes++;
+            }
+    }
         this.estudiantes_A = estudiantes; 
     }
     public double getpromedio(){

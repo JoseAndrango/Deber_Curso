@@ -9,6 +9,8 @@ public class TestCurso {
         double [] notas = new double[12];
         llenanotas(notas);
         cursoA.setnotas(notas);
+        cursoA.setpromedio();
+        cursoA.setestudiantesA();
         System.out.println("promedio del curso:"+cursoA.getpromedio());
         System.out.println("N de estudiantes encima del promedio:"+cursoA.getnroestudiantesA());
     }
